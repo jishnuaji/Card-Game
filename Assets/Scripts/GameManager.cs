@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,16 @@ public class GameManager : MonoBehaviour
                 }
             break;
         }
+    }
+    public void game()
+    {
+        //mainMenu.SetActive(false);
+        SceneManager.LoadScene(1);
+    }
+    public void home()
+    {
+        //mainMenu.SetActive(true);
+        SceneManager.LoadScene(0);
     }
 
 }
