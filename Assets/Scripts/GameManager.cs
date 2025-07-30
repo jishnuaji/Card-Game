@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject mainMenu;
+    public GameObject first;
+
+    public static GameManager instance;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -17,25 +20,12 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void cards(int sloats)
-    {
-        switch (sloats)
-        {
-            case 1:if (sloats == 1)
-                {
-                    Debug.Log("destroy");
-                }
-            break;
-        }
-    }
     public void game()
     {
-        //mainMenu.SetActive(false);
         SceneManager.LoadScene(1);
     }
     public void home()
     {
-        //mainMenu.SetActive(true);
         SceneManager.LoadScene(0);
     }
 
